@@ -6,9 +6,11 @@
     "baseUrl": "./src",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "outDir": "dist",
     "paths": {
       "@log": ["log"],
-      "@constants": ["utils/constants"],
+      "@constants": ["utils/constants"]
     }
-  }
+  },
+  "exclude": ["node_modules"]
 }

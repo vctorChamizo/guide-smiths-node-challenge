@@ -1,3 +1,4 @@
-export { methods } from "./methods";
-export { state } from "./state";
-export { orientation } from "./orientation";
+export { Methods } from "./Methods";
+export { State } from "./State";
+export { Orientation } from "./Orientation";
+export { Instructions } from "./Instructions";

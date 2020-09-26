@@ -1,4 +1,4 @@
-export enum state {
+export enum State {
   ON = "ON",
   OFF = "OFF",
   LOST = "LOST",

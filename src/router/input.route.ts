@@ -7,4 +7,4 @@ router.get("/list", GetInputFiles);
 
 router.post("/create", CreateInputFile);
 
-export const inputRoute = { router: router, path: "input" };
+export default router;

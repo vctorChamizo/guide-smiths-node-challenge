@@ -7,4 +7,4 @@ router.get("/robots", GetLostRobot);
 
 router.get("/explore", GetGridExplore);
 
-export const infoRoute = { router: router, path: "info" };
+export default router;

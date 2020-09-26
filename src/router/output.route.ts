@@ -7,4 +7,4 @@ router.get("/exec", ExecuteInput);
 
 router.get("/list", GetOutputFiles);
 
-export const outputRoute = { router: router, path: "output" };
+export default router;

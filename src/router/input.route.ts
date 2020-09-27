@@ -1,10 +1,10 @@
-import { Router } from "express";
-import { GetInputFiles, CreateInputFile } from "../controllers";
+import { Router } from 'express';
+import { GetInputFiles, CreateInputFile } from '../controllers';
 
 const router = Router();
 
-router.get("/list", GetInputFiles);
+router.get('/list', GetInputFiles);
 
-router.post("/create", CreateInputFile);
+router.post('/create', CreateInputFile);
 
-export const inputRoute = { router: router, path: "input" };
+export default router;

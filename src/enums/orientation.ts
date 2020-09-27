@@ -1,6 +1,6 @@
-export enum orientation {
-  N = "NORTH",
-  S = "SOUTH",
-  E = "EAST",
-  W = "WEST",
+export enum Orientation {
+  N = 'N',
+  S = 'S',
+  E = 'E',
+  W = 'W',
 }

@@ -1,5 +1,5 @@
-export enum state {
-  ON = "ON",
-  OFF = "OFF",
-  LOST = "LOST",
+export enum State {
+  ON = 'ON',
+  OFF = 'OFF',
+  LOST = 'LOST',
 }

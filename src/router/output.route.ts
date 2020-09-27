@@ -1,10 +1,10 @@
-import { Router } from "express";
-import { GetOutputFiles, ExecuteInput } from "../controllers";
+import { Router } from 'express';
+import { GetOutputFiles, ExecuteInput } from '../controllers';
 
 const router = Router();
 
-router.get("/exec", ExecuteInput);
+router.get('/exec', ExecuteInput);
 
-router.get("/list", GetOutputFiles);
+router.get('/list', GetOutputFiles);
 
-export const outputRoute = { router: router, path: "output" };
+export default router;

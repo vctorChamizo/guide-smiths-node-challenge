@@ -1,11 +1,11 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from 'express';
 
-import { executeInput, getOutputFiles } from "../services";
+import { executeInput, getOutputFiles } from '../services';
 
 export const GetOutputFiles = async (
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   try {
     const filesName = await getOutputFiles();
@@ -19,7 +19,7 @@ export const GetOutputFiles = async (
 export const ExecuteInput = async (
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   try {
     const { filename } = req.query as { filename: string };

@@ -1,5 +1,5 @@
 export enum Instructions {
-  F = "F",
-  R = "R",
-  L = "L",
+  F = 'F',
+  R = 'R',
+  L = 'L',
 }

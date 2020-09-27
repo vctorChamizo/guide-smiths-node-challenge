@@ -1,5 +1,5 @@
-import { Orientation, State, Instructions } from "enums";
-import { ICoordinate } from "./Coordinate.interface";
+import { Orientation, State, Instructions } from '../enums';
+import { ICoordinate } from './Coordinate.interface';
 
 export interface IRobot {
   position: ICoordinate;

@@ -1,5 +1,6 @@
 export class BaseError extends Error {
   status: number;
+
   constructor(message?: string, status?: number) {
     super();
 
@@ -7,7 +8,7 @@ export class BaseError extends Error {
 
     this.name = this.constructor.name;
 
-    this.message = message || "Something went wrong, Please try again";
+    this.message = message || 'Something went wrong, Please try again';
 
     this.status = status || 500;
   }

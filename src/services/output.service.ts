@@ -19,7 +19,7 @@ export const executeInput = async (filename: string): Promise<IRobot[]> => {
     const executedAssigment = executeAssigment(assigment);
 
     fs.writeFileSync(
-      `${FILE_PATH}output/execute_${filename}.json`,
+      `${FILE_PATH}output/executed_${filename}.json`,
       JSON.stringify(executedAssigment)
     );
 

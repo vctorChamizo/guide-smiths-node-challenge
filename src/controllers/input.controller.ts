@@ -1,6 +1,8 @@
 import { Request, Response, NextFunction } from "express";
 
-import { getInputFiles } from "../services";
+import { getInputFiles, createInputFile } from "../services";
+
+import { SUCCESSFUL_OP } from "@constants";
 
 export const GetInputFiles = async (
   req: Request,
@@ -21,6 +23,12 @@ export const CreateInputFile = async (
   res: Response,
   next: NextFunction
 ) => {
+  const data = req.body;
+  const { filename } = req.query as { filename: string };
+
+  await createInputFile(data, filename);
+
+  res.status(200).json(SUCCESSFUL_OP);
   try {
   } catch (error) {
     next(error);

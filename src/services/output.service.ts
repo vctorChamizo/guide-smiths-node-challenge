@@ -1,7 +1,7 @@
 import fs from "fs";
 
-import { buildAssignment } from "../utils";
-import { IAssignment } from "interfaces/Assignment.interface";
+import { buildAssignment, executeAssigment } from "../utils";
+import { IAssignment, IRobot } from "../interfaces";
 
 import { FILE_PATH } from "@constants";
 
@@ -9,15 +9,21 @@ export const getOutputFiles = async () => {
   return fs.readdirSync(`${FILE_PATH}output/`);
 };
 
-export const executeInput = async (filename: string) /*: IScannig[]*/ => {
+export const executeInput = async (filename: string): Promise<IRobot[]> => {
   try {
-    const stream = await fs.createReadStream(`${FILE_PATH}input/${filename}`, {
+    const data = await fs.readFileSync(`${FILE_PATH}input/${filename}`, {
       encoding: "utf8",
     });
 
-    stream.on("data", (chunk) => {
-      const assigment: IAssignment = buildAssignment(chunk.toString());
-    });
+    const assigment: IAssignment = buildAssignment(data);
+    const executedAssigment = executeAssigment(assigment);
+
+    fs.writeFileSync(
+      `${FILE_PATH}output/execute_${filename}.json`,
+      JSON.stringify(executedAssigment)
+    );
+
+    return executedAssigment.robots as IRobot[];
   } catch (error) {
     throw error;
   }

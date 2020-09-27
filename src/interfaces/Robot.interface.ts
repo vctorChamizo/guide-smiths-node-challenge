@@ -6,5 +6,5 @@ export interface IRobot {
   orientation: Orientation;
   instructions: Instructions[];
   state: State;
-  path?: ICoordinate[];
+  path: ICoordinate[];
 }

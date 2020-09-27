@@ -1,1 +1,1 @@
-export { buildAssignment } from "./assigment";
+export { buildAssignment, executeAssigment } from "./assigment";

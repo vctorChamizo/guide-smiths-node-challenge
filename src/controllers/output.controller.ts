@@ -24,9 +24,9 @@ export const ExecuteInput = async (
   try {
     const { filename } = req.query as { filename: string };
 
-    const scannigs = executeInput(filename);
+    const robots = await executeInput(filename);
 
-    res.status(200).json(scannigs);
+    res.status(200).json(robots);
   } catch (error) {
     next(error);
   }

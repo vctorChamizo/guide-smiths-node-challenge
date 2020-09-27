@@ -1,6 +1,6 @@
 FROM node:10-alpine
 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+RUN mkdir -p /home/node/app/node_modules
 
 WORKDIR /home/node/app
 
@@ -8,7 +8,7 @@ COPY package*.json ./
 
 RUN yarn install
 
-RUN yarn add nodemon
+RUN yarn global add nodemon
 
 COPY . .
 

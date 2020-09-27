@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: guide-smiths-node-challenge
+    container_name: guide-smiths-node-challenge
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/home/node/app
+    command: yarn run dev

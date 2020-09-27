@@ -5,7 +5,7 @@ import logger from '@log';
 import { PORT } from '@constants';
 
 import index from './router';
-import { handleError } from './errors';
+import { handleError, handleNotFound } from './errors';
 
 const app = express();
 
@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 
 app.use('/', index);
 
+handleNotFound(app);
 handleError(app);
 
 app.listen(PORT, () => {

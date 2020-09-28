@@ -1,3 +1,3 @@
-const logger = require("pino")({ prettyPrint: true });
+const logger = require('pino')({ prettyPrint: true });
 
 export default logger;

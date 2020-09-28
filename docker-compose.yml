@@ -5,8 +5,8 @@ services:
     build:
       context: .
       dockerfile: dockerfile
-    image: guide-smiths-node-challenge
-    container_name: guide-smiths-node-challenge
+    image: guide-smiths-node-challenge-image
+    container_name: guide-smiths-node-challenge-container
     restart: unless-stopped
     ports:
       - '3000:3000'

@@ -4,7 +4,7 @@ services:
   api:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     image: guide-smiths-node-challenge
     container_name: guide-smiths-node-challenge
     restart: unless-stopped
@@ -12,4 +12,5 @@ services:
       - '3000:3000'
     volumes:
       - .:/home/node/app
+      - ./node_modules:/home/node/app/node_modules
     command: yarn run dev

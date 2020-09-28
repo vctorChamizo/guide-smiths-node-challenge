@@ -11,7 +11,8 @@ export const getInputFiles = async () => {
 };
 
 export const createInputFile = async (data: any, filename: string) => {
-  if (!data) throw new MissingDataError(MISSING_DATA);
+  console.log(filename);
+  if (!data || !filename) throw new MissingDataError(MISSING_DATA);
 
   const { x, y } = data.dimension;
   const dimension = `${x} ${y}`;

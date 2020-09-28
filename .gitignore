@@ -149,4 +149,4 @@ dist
 .history
 
 ### Data ###
-/src/data/*
+/src/data/output/*

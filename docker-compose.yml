@@ -5,9 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: guide-smiths-node-challenge
-    container_name: guide-smiths-node-challenge
-    restart: unless-stopped
+    image: guide-smiths-node-challenge-image
+    container_name: guide-smiths-node-challenge-container
     ports:
       - '3000:3000'
     volumes:

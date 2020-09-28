@@ -6,7 +6,10 @@ import { IAssignment, IRobot, ICoordinate } from '../interfaces';
 import { Instructions, State, Orientation } from '../enums';
 import { MissingDataError } from '../errors';
 
-const positionAreEqual = (position: ICoordinate, newPosition: ICoordinate) => {
+export const positionAreEqual = (
+  position: ICoordinate,
+  newPosition: ICoordinate,
+) => {
   return position.x === newPosition.x && position.y === newPosition.y;
 };
 

@@ -7,8 +7,8 @@ export const GetLostRobot = async (
   next: NextFunction,
 ) => {
   try {
-    const { fileName } = req.query as { fileName: string };
-    const robots: number = await getLostRobots(fileName);
+    const { filename } = req.query as { filename: string };
+    const robots: number = await getLostRobots(filename);
 
     res.status(200).json(robots);
   } catch (error) {
@@ -22,7 +22,10 @@ export const GetGridExplore = async (
   next: NextFunction,
 ) => {
   try {
-    res.status(200).json('');
+    const { filename } = req.query as { filename: string };
+    const grid: number = await getGridExplore(filename);
+
+    res.status(200).json(grid);
   } catch (error) {
     next(error);
   }

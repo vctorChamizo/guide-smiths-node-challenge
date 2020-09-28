@@ -1,3 +1,3 @@
-export { State } from './State';
-export { Orientation } from './Orientation';
-export { Instructions } from './Instructions';
+export { State } from './state';
+export { Orientation } from './orientation';
+export { Instructions } from './instructions';

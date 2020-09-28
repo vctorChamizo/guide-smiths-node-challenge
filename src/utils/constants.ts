@@ -7,7 +7,7 @@ dotenv.config();
 export const PORT = process.env.PORT || '3000';
 
 // Files paths
-export const FILE_PATH = path.join(__dirname, '../data/');
+export const FILE_PATH = path.join(__dirname, '../../data/');
 
 // Info Messages
 export const SUCCESSFUL_OP = 'Operation successful';

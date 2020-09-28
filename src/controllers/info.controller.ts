@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
+import { getLostRobots, getGridExplore } from '../services';
 
 export const GetLostRobot = async (
   req: Request,
@@ -6,7 +7,10 @@ export const GetLostRobot = async (
   next: NextFunction,
 ) => {
   try {
-    res.status(200).json('');
+    const { filename } = req.query as { filename: string };
+    const robots: number = await getLostRobots(filename);
+
+    res.status(200).json(robots);
   } catch (error) {
     next(error);
   }
@@ -18,7 +22,10 @@ export const GetGridExplore = async (
   next: NextFunction,
 ) => {
   try {
-    res.status(200).json('');
+    const { filename } = req.query as { filename: string };
+    const grid: number = await getGridExplore(filename);
+
+    res.status(200).json(grid);
   } catch (error) {
     next(error);
   }

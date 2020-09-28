@@ -4,13 +4,11 @@ services:
   api:
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     image: guide-smiths-node-challenge-image
     container_name: guide-smiths-node-challenge-container
-    restart: unless-stopped
     ports:
       - '3000:3000'
     volumes:
       - .:/home/node/app
-      - ./node_modules:/home/node/app/node_modules
     command: yarn run dev
